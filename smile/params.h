@@ -1,0 +1,46 @@
+#ifndef PARAMS_H
+#define PARAMS_H
+
+#define PQMX_NAMESPACE(s) PQMX_##s
+
+#define PQMX_N 4096
+#define PQMX_L 1024
+#define PQMX_Q 4611686018427365377
+#define PQMX_P 10000009
+#define PQMX_BETA 4096
+#define PQMX_ETA 2
+
+#define SIGMA0 369062
+#define SIGMA1 563752
+
+// #define PQMX_BETA1 (SIGMA0*sqrt(2.0*PQMX_ELL*PQMX_N))
+// #define PQMX_BETA2 (SIGMA1*sqrt(2.0*PQMX_KAPPA*PQMX_N))
+
+#define PQMX_SYMBYTES 512   /* size in bytes of hashes, and seeds */
+#define PQMX_SSBYTES  32   /* size in bytes of shared key */
+
+#define PQMX_POLYBYTES		4096*8
+
+
+#define PQMX_MU 1
+#define PQMX_LAMBDA 1
+#define PQMX_NV 1
+#define PQMX_NC 10
+
+
+#define PQMX_K 2
+#define PQMX_ELL 4
+#define PQMX_M  (PQMX_K+3)  
+#define PQMX_KAPPA (PQMX_LAMBDA + PQMX_MU + PQMX_M)
+#define PQMX_DELTA (1L<<47)
+#define PQMX_POLYCOMPRESSEDBYTES    24576
+
+
+
+#define PQMX_INDCPA_MSGBYTES       (PQMX_SYMBYTES)
+#define PQMX_INDCPA_PUBLICKEYBYTES (PQMX_POLYVECBYTES + PQMX_SYMBYTES)
+#define PQMX_INDCPA_SECRETKEYBYTES (PQMX_POLYVECBYTES)
+#define PQMX_INDCPA_BYTES          (PQMX_POLYVECCOMPRESSEDBYTES + PQMX_POLYCOMPRESSEDBYTES)
+
+
+#endif
